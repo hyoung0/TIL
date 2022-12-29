@@ -1,41 +1,42 @@
-# GitGub profile readme
-저장소의 이름을 내 github이름으로 설정하고, github 이용하기에서 한 것과 같이 하면 된다.
-
 # Branch
 ## Branch란?
-독립적인 작업흐름을 만들고 관리
+독립적인 작업흐름을 만들고 관리하는 것이다.  
+각각 독립된 버전의 상태로 작업할 수 있으며 다른 사람의 작업물 상태를 가져올 수도, 나의 작업 상태를 줄 수도 있다.   
+즉, 독립적인 작업을 한 후 병합하기 편하게 해준다.  
+나무에서 기둥을 master, 가지를 branch라고 생각할 수 있다. 수 많은 가지(독립적인 작업)이 기둥으로 모여 병합된다고 이해할 수 있다.  따라서 기본적으로 master가 최종본이 된다.
 
-각각의 버전의 상태로 작업할 수 있다. 다른 사람의 작업물 상태로 가서 작업할 수 있다.
+---
+master파일을 새로 만들었다면, 다음과 같은 과정이 우선 선행되어야 한다.  
 
-각자 작업한 것을 합치는 것이merge
+        $ git init
+        $ git add .
+        $ git commit -m 'season'
 
-마스터 브런치로 가져올거면 마스터에서 merge해야됨
+## Branch의 주요 명령어  
+> <브랜치명>은 내가 만드는 것  
 
-git checkout -b 하면 저절로 만들고 이동함
+1. 브랜치 생성  
+```
+$ git branch <브랜치명>
+```
+2. 브랜치 이동  
+```
+$ git checkout <브랜치명>
+```
+3. 브랜치 생성 및 이동  
+```
+$ git checkout -b <브랜치명>
+```
+4. 브랜치 삭제  
+```
+$ git branch -d <브랜치명>
+```
+5. 브랜치 목록  
+```
+$ git branch 
+```
+6. 브랜치 병합    
+```
+$ git merge <브랜치명>
+```
 
-2단계 : 다른 파일 수정
-master에는 머지한 fearur/report가 추가된다.  feature/report에는 머지하지 않았기 때문에 없다 master에서 만든 hotfitx가 없다
-
-3단계 : 동일파일 수정
-
-충돌이 나면? git status에서 both commit을 보면 무엇이 충돌 났는지 알 수 있다
-
-     딥러닝으로 글자 비교해서 같은 분야끼리 합치면 편하겠는걸,,
-충돌을 해결했다면, add, commit한다.
-git log --oneline -graph
-HEAD는 내가 있는 위치
-독립적인 작업을 병합할 수 있게 해준다.
-
-git flow
-
-pull request로 github에 올라가는 것이 브랜치 만들기 전 상태인 master에 있던 것이고, 그 이후 merge를 해서 github에서 merge가 되는건가요??
-
-master이 아닌 branch에서 push (merge 안 한 상태)
-
-commit은 저장의 개념이 아니므로 완료된 걸 올려야 한다 ㅎ
-
-
-git restore --staged b.txt
-git commit --amend
-
-restore 뒤로 가기
