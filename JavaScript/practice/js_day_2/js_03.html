@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+
+<body>
+  <div id="original" class="container">
+    <div id="card" class="card w-25">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Sir_Tim_Berners-Lee.jpg/540px-Sir_Tim_Berners-Lee.jpg"
+        class="card-img-top">
+      <h4 class="card-header fw-bolder">
+        팀 버너스리
+      </h4>
+      <div class="card-body">
+        <p class="card-text">1989년 월드 와이드 웹의 하이퍼텍스트 시스템을 고안하여 개발. 웹의 아버지</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">국적 - 영국</li>
+        <li class="list-group-item">생년월일 - 1955년 6월 8일</li>
+        <li class="list-group-item">직업 - 전산과학자, 프로그래머, 교수</li>
+        <li class="list-group-item">출신 대학 - 옥스퍼드 대학교 물리학 학사</li>
+      </ul>
+      <div class="card-footer text-end">
+        <a href="https://ko.wikipedia.org/wiki/%ED%8C%80_%EB%B2%84%EB%84%88%EC%8A%A4%EB%A6%AC" class="card-link">
+          추가 정보
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div id="copy" class="container">
+
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+</body>
+
+<script>
+  // div#original 과 동일한 DOM 생성 후 div#copy 의 자식 요소로 추가
+
+    // card 
+    const card = document.createElement('div')
+    card.id = 'card'
+    card.classList.add('card', 'w-25')
+
+    // img
+    const img = document.createElement('img')
+    img.setAttribute('src', "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Sir_Tim_Berners-Lee.jpg/540px-Sir_Tim_Berners-Lee.jpg")
+    img.classList.add('card-img-top')
+    card.appendChild(img)
+
+    //  h4
+    const h4 = document.createElement('h4')
+    h4.classList.add('card-hearder', 'fw-bolder')
+    h4.textContent = '팀버너스리'
+    card.appendChild(h4)
+
+    // card_body
+    const card_body = document.createElement('div')
+    card_body.classList.add('card-body')
+    card.appendChild(card_body)
+    // card_text
+    const card_text = document.createElement('p')
+    card_text.classList.add('card-text')
+    card_text.textContent = '1989년 월드 와이드 웹의 하이퍼텍스트 시스템을 고안하여 개발. 웹의 아버지'
+    card_body.appendChild(card_text)
+    
+    // ul
+    const ul = document.createElement('ul')
+    card_body.classList.add('list-group', 'list-group-flush')
+    card.appendChild(ul)
+    // li_1
+    const li_1 = document.createElement('li')
+    li_1.classList.add('list-group-item')
+    li_1.textContent = '국적 - 영국'
+    ul.appendChild(li_1)
+    // li_2
+    const li_2 = document.createElement('li')
+    li_2.classList.add('list-group-item')
+    li_2.textContent = '생년월일 - 1955년 6월 8일'
+    ul.appendChild(li_2)
+    // li_3
+    const li_3 = document.createElement('li')
+    li_3.classList.add('list-group-item')
+    li_3.textContent = '직업 - 전산과학자, 프로그래머, 교수'
+    ul.appendChild(li_3)
+    // li_4
+    const li_4 = document.createElement('li')
+    li_4.classList.add('list-group-item')
+    li_4.textContent = '출신 대학 - 옥스퍼드 대학교 물리학 학사'
+    ul.appendChild(li_4)
+
+    // footer
+    const footer = document.createElement('div')
+    footer.classList.add('card-footer', 'text-end')
+    card.appendChild(footer)
+    // footer_a
+    const footer_a = document.createElement('a')
+    footer_a.setAttribute('href', 'https://ko.wikipedia.org/wiki/%ED%8C%80_%EB%B2%84%EB%84%88%EC%8A%A4%EB%A6%AC')
+    footer_a.classList.add('card-link')
+    footer_a.textContent = '추가 정보'
+    footer.appendChild(footer_a)
+
+    // div#copy 의 자식 요소로 추가
+    const div_copy = document.querySelector('div#copy')
+    div_copy.appendChild(card)
+</script>
+
+</html>
+

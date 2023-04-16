@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+
+<body>
+  <div id="original" class="container">
+    <div>
+      <div class="mb-3">
+        <label for="inputEmail" class="form-label">이메일</label>
+        <input type="email" class="form-control" id="inputEmail">
+      </div>
+      <div class="mb-3">
+        <label for="inputPassword" class="form-label">비밀번호</label>
+        <input type="password" class="form-control" id="inputPassword">
+      </div>
+      <div class="mb-3">
+        <button class="btn btn-primary" role="submit">로그인</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="copy" class="container">
+
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+</body>
+
+<script>
+  // div#original 과 동일한 DOM 생성 후 div#copy 의 자식 요소로 추가
+
+    // div1 (container)
+    const div1 = document.createElement('div')
+    div1.id = 'original'
+    div1.classList.add('container')
+    console.log(div1)
+
+    // div2 
+    const div2 = document.createElement('div')
+    div1.appendChild(div2)
+
+    // div2 자식 div. (class는 mb-3)
+    const div2_1 = document.createElement('div')
+    div2_1.classList.add('mb-3')
+    div2.appendChild(div2_1)
+    // div2 자식 div. (class는 mb-3)
+    const div2_2 = document.createElement('div')
+    div2_2.classList.add('mb-3')
+    div2.appendChild(div2_2)
+    // div2 자식 div. (class는 mb-3)
+    const div2_3 = document.createElement('div')
+    div2_3.classList.add('mb-3')
+    div2.appendChild(div2_3)
+    
+
+    // label 1
+    const label_1 = document.createElement('label')
+    label_1.setAttribute('for','inputEmail')
+    label_1.classList.add('form-label')
+    label_1.textContent = '이메일'
+    div2_1.appendChild(label_1)
+    // input 1 
+    const input_1 = document.createElement('input')
+    input_1.setAttribute('type','email')
+    input_1.classList.add('form-control')
+    input_1.id = 'inputEmail'
+    div2_1.appendChild(input_1)
+
+    // label 2
+    const label_2 = document.createElement('label')
+    label_2.setAttribute('for','inputPassword')
+    label_2.classList.add('form-label')
+    label_2.textContent = '비밀번호'
+    div2_2.appendChild(label_2)
+    // input 2 
+    const input_2 = document.createElement('input')
+    input_2.setAttribute('type','password')
+    input_2.classList.add('form-control')
+    input_2.id = 'inputPassword'
+    div2_2.appendChild(input_2)
+
+    // button
+    const button = document.createElement('button')
+    button.classList.add('btn', 'btn-primary')
+    button.setAttribute('role', 'submit')
+    button.textContent = '로그인'
+    div2_3.appendChild(button)
+    
+    // div#copy 의 자식 요소로 추가
+    const div_copy = document.querySelector('div#copy')
+    div_copy.appendChild(div1)
+</script>
+
+</html>
+
