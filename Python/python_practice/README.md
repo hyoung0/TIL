@@ -1,3 +1,6 @@
+Python Practice
+---
+
 [👀 example 1.2](./practice%201.2.md)  
   
 [👀 example 1.3](./practice%201.3.md)    
