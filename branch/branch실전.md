@@ -1,11 +1,13 @@
 ## Branch 상황  
 우리가 Branch를 하는 상황은 세가지로 볼 수 있다.  
+
 i) 하나의 이력(commit) 변경 사항 있음  
-
 ii) 두개의 이력(commit) 변경 사항 있음, 그 둘은 다른 파일  
-
 iii) 두개의 이력(commit) 변경 사항 있음, 그 둘이 같은 파일   
+
 이제 각각의 상황을 만들고 이해해보자.  
+
+<br>
 
 ---
 
@@ -14,11 +16,13 @@ i) 하나의 이력(commit) 변경 사항 있음
 
         $ git brunch winter (master)
         $ git checkout winter (master)  
-
+  
 브랜치 winter을 생성하고 winter로 브랜치를 옮겼다. 이제 master 대신 winter가 뜰 것이다.  
 브랜치 생성과 이동을 한번에 하고 싶다면,  
 
         $ git brunch -b winter
+
+<br>
 
 2. 브랜치에서 작업 후 버전 기록  
 작업에는 여러가지가 있으며 지금은 snow라는 파일을 추가하는 상황을 생각해 보자.  
@@ -27,13 +31,17 @@ i) 하나의 이력(commit) 변경 사항 있음
         $ git add . (winter)
         $ git commit -m 'Add snow' (winter)
 
+<br>
+
 3. master에 병합  
 브랜치에서 작업한 것을 master로 가져와서 합치고 싶다면 master로 이동 후 merge해야 한다.   
 만약 이동하지 않고 merge한다면 합병된 최종본이 master가 아닌 winter브랜치가 된다.  
 
         $ git checkout master (winter)
         $ git merge winter (master)  
-    
+
+<br>
+
 4. log로 보기  
 
 바로 위의 코드 중 첫번째 코드 입력 후 $ git log --oneline을 입력하면. merge전이므로 season만 나오는 것을 확인 할 수 있다. 
@@ -41,6 +49,8 @@ i) 하나의 이력(commit) 변경 사항 있음
  두번쨰 코드 입력 후 $ git log --oneline을 입력하면 winter가 merge되어 Add snow, seaon이 나오는 것을 알 수 있다.
 
  즉, 이 상황에서는 winter에서 commit한 log기록과 master에서 merge한 것의 log기록이 같다. 
+
+<br>
 
 5. 브랜치 삭제  
 
