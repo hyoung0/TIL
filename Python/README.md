@@ -1,5 +1,5 @@
-[👀 python example](./python_example/)  
+[👀 python example](./python%20example/)  
   
-[👀 python practice](./python_practice/)  
+[👀 python practice](./python%20practice/)  
 
 [👀 python theory](./python_theory/)  
