@@ -2,4 +2,4 @@
   
 [👀 python practice](./python%20practice/)  
 
-[👀 python theory](./python_theory/)  
+[👀 python theory](./python%20theory/)  
