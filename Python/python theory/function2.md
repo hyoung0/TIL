@@ -109,8 +109,6 @@ function('spam')   # argument
   - 식별자(변수명)들은 각각의 name space에 저장
   - `LEGB Rule` : 함수 내에서는 바깥 Scope의 변수에 접근 가능하나 수정 불가능
 
-    ![LEGB](LEGB.jpg)
-
   - global 문
   ```python
   a = 5
