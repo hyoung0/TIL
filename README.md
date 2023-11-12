@@ -6,11 +6,11 @@
 
 [👀 Python](Python/README.md)
 
-[👀 Web](Web/README.md)  
+[👀 html&css](html&css/README.md)
 
 [👀 Django](django/README.md)  
 
 [👀 MySQL](MySQL/README.md)  
 
-[👀 JavaScript](JavaScript/README.md)  
+[👀 JavaScript](JavaScript/practice/README.md)  
 
