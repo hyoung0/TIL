@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        div {
+            margin: 10px
+        }
+        .container1{
+            border: 1px solid black;
+            width: 80%;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: gray;
+
+        }
+
+        .container2{
+            border: solid 1px black;
+            display: flex;
+            justify-content:space-between;
+            background-color: aquamarine;
+        }
+
+        .box {
+            border: solid 1px black;
+            width: 20%;
+            text-align: center;
+            margin: 2% 5% 2%
+        }
+
+        .align-self {
+            align-self: center;
+        }
+
+        /* content area */
+        .container3 {
+            border: solid 1px black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: aquamarine;
+        }
+
+        p {
+            margin:5%
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container1">
+        <div class="container2"> 
+            <div class="box">Logo</div>
+            <div class="align-self">NavBar</div>
+            <div class="box">Login</div> 
+        </div>
+        <div class="container3">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio, inventore doloremque. Ex unde ducimus voluptatem, quasi dolorum eligendi sequi esse fuga deleniti inventore maxime assumenda consequatur explicabo, voluptatum eveniet amet.</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo nobis ducimus ipsum magnam mollitia, praesentium voluptate reiciendis ullam sunt ipsa rerum. Neque, corrupti ex soluta nulla hic delectus facilis officia?</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi expedita ea explicabo, dolorem quod illo quae, alias quibusdam voluptates doloremque aut blanditiis aperiam numquam reiciendis iure consequuntur saepe et maxime?</p>
+        </div>
+    </div>
+</body>
+</html>
