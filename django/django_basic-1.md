@@ -105,6 +105,52 @@
 3. 현재 파일의 가상환경 선택
 
 
+## 프로젝트와 앱
+
+- django project
+  - 애플리케이션의 집합
+
+  - DB 설정, URL 연결, 전체 앱 설정 등을 처리
+
+- django application
+  - 독립적으로 작동하는 기능 단위 모듈
+
+  - 각자 특정한 기능을 담당하며 다른 앱들과 함께 하나의 프로젝트를 구성
+
+  - MTV 패턴에 해당하는 파일 및 폴더를 담당
+
+### 앱의 생성과 등록
+
+- 앱 생성
+  ```bash
+  $ python manage.py startapp <articles>
+  # 앱의 이름은 복수형 권장
+  ```
+
+- 앱 등록 : 프로젝트 파일의 settings.py에 등록(반드시 생성 후 등록하기)
+  ```python
+  # Application definition
+
+  INSTALLED_APPS = [
+      # 앱 등록 권장 순서
+      # 1. local app
+      'articles',
+
+      # 2. 3rd party app(설치를 통해 추가하는 앱)
+
+      # 3. 기본 django app
+      'django.contrib.admin',
+      'django.contrib.auth',
+      'django.contrib.contenttypes',
+      'django.contrib.sessions',
+      'django.contrib.messages',
+      'django.contrib.staticfiles',
+  ]
+  ```
+
+<br>
+
+
 
 
 
