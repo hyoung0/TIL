@@ -50,7 +50,7 @@
 4. 패키지 의존성 관리
     - 의존성 파일 생성(패키지 설치 시마다 진행)
       ```bash
-      $ pip freeze > requirments.txt
+      $ pip freeze > requirements.txt
       ```
       - 현재 환경에 설치된 패키지 목록을 requirements.txt 파일 포맷으로 출력
 
